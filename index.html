@@ -3,7 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Claude Fitness – Gym in Sanganer, Jaipur</title>
+<title>Claude Fitness – Gym in Sanganer, Jaipur 302029</title>
+<meta name="description" content="Claude Fitness, 245 New Sanganer Road, Sanganer, Jaipur 302029. Strength, cardio, yoga and Zumba. Open Mon–Sat 5–11 AM and 5–10 PM. Call 70230 13549.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HealthClub","name":"Claude Fitness","telephone":"+917023013549","address":{"@type":"PostalAddress","streetAddress":"245, New Sanganer Road","addressLocality":"Sanganer, Jaipur","addressRegion":"Rajasthan","postalCode":"302029","addressCountry":"IN"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"05:00","closes":"11:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"17:00","closes":"22:00"}]}</script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Barlow:wght@400;500;600&display=swap">
 <style>
 :root{--ink:#14183a;--bg:#eef1f6;--card:#fff;--tx:#1b1f3b;--mut:#5b6080;--sig:#f2d13d;--line:#d6dbe7;--ok:#1f9d55;--bad:#d64545;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -150,7 +152,7 @@ footer{background:var(--soft);color:var(--mut)}footer h3{color:var(--tx)}
 <div class="status"><span class="dot" id="dot"></span><span id="stat">Checking hours…</span></div>
 <h1>Lift <span>harder.</span></h1>
 <p>Free weights, a full cardio floor and coaches who know your name. Right on New Sanganer Road, a few minutes from Sanganer bazaar.</p>
-<a class="btn" href="#join">Book a free trial day</a> <a class="btn ghost" href="#plans">See pricing</a>
+<a class="btn" href="#join">Book a free trial day</a> <a class="btn ghost" href="#plans">See pricing</a> <a class="btn ghost" href="tel:+917023013549">Call 70230 13549</a>
 </div>
 <div class="crowd"><h3>Floor right now</h3><div class="meter"><i id="meter" style="width:0"></i></div><div id="crowdTxt" style="color:#c9cdea;font-size:15px"></div>
 <p style="font-size:14px;margin:14px 0 0">Estimated from usual busy hours. Quietest: 9–11 am.</p></div>
@@ -186,13 +188,13 @@ footer{background:var(--soft);color:var(--mut)}footer h3{color:var(--tx)}
 </div></section>
 
 <section id="join" class="dark"><div class="wrap">
-<h2>Join or book a free trial</h2><p class="sub">Send your details. We call back within a day. Nothing is charged online.</p>
+<h2>Join or book a free trial</h2><p class="sub">Your enquiry opens in WhatsApp so it reaches us instantly. Nothing is charged online.</p>
 <form id="form" class="card" style="max-width:640px" novalidate>
 <label for="fN">Full name</label><input id="fN" required autocomplete="name">
 <div class="row2"><div><label for="fP">Mobile number</label><input id="fP" inputmode="tel" required autocomplete="tel" placeholder="10 digits"></div><div><label for="fPl">Interested in</label><select id="fPl"></select></div></div>
 <label for="fM">Message (optional)</label><textarea id="fM" rows="3" placeholder="Goal, preferred timing…"></textarea>
 <p id="fErr" style="color:#ff9b9b;margin:8px 0" role="alert"></p>
-<button class="btn" type="submit">Send enquiry</button>
+<button class="btn" type="submit">Send on WhatsApp</button>
 </form>
 </div></section>
 
@@ -207,7 +209,7 @@ footer{background:var(--soft);color:var(--mut)}footer h3{color:var(--tx)}
 </main>
 
 <footer id="contact"><div class="wrap"><div class="cards">
-<div><h3>Claude Fitness</h3><p>245, New Sanganer Road,<br>Sanganer, Jaipur, Rajasthan</p><a class="btn sm" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=245+New+Sanganer+Road+Sanganer+Jaipur">Get directions</a></div>
+<div><h3>Claude Fitness</h3><p>245, New Sanganer Road,<br>Sanganer, Jaipur, Rajasthan – 302029</p><a class="btn sm" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=245+New+Sanganer+Road+Sanganer+Jaipur+302029">Get directions</a></div>
 <div><h3>Hours</h3><div id="hrs"></div></div>
 <div><h3>Reach us</h3><p><a id="telL" href="#"></a><br><a id="waL" target="_blank" rel="noopener" href="#">Chat on WhatsApp</a></p><p style="font-size:14px">© <span id="yr"></span> Claude Fitness</p></div>
 </div></div></footer>
@@ -218,7 +220,7 @@ footer{background:var(--soft);color:var(--mut)}footer h3{color:var(--tx)}
 <dialog id="admin"><div class="dh"><h3>Owner dashboard</h3><button aria-label="Close" onclick="admin.close()">×</button></div><div class="db" id="adminBody"></div></dialog>
 
 <script>
-const CFG={phone:"91702301354",display:"+91 7023013549",pin:"1234",
+const CFG={phone:"917023013549",display:"+91 70230 13549",pin:"528391",staff:"406718",
 owner:true};
 let S={bill:1,day:new Date().getDay()||1};
 const DEF={banner:"Free trial day for first-time visitors. Walk in 5–11 AM or 5–10 PM, Monday to Saturday.",plans:[
@@ -283,13 +285,13 @@ if(n.length<2){$("fErr").textContent="Please enter your name.";return}
 if(p.length!=10){$("fErr").textContent="Enter a 10-digit mobile number.";return}
 $("fErr").textContent="";
 D.enq.unshift({id:Date.now(),name:n,phone:p,plan:$("fPl").value,msg:$("fM").value.trim(),date:new Date().toISOString(),st:"New"});save();
-e.target.reset();toast("Thanks "+n.split(" ")[0]+"! We will call you soon.")};
+const en=D.enq[0];e.target.reset();toast("Thanks "+n.split(" ")[0]+"! Opening WhatsApp to send your enquiry…");window.open("https://wa.me/"+CFG.phone+"?text="+encodeURIComponent(`New enquiry – Claude Fitness website\nName: ${en.name}\nMobile: ${en.phone}\nInterested in: ${en.plan}`+(en.msg?`\nMessage: ${en.msg}`:"")),"_blank")};
 
 /* ---------- owner dashboard ---------- */
 const iso=d=>{const z=new Date(d.getTime()-d.getTimezoneOffset()*6e4);return z.toISOString().slice(0,10)};
 const ld=s=>new Date(s+"T00:00:00"),fd=s=>ld(s).toLocaleDateString("en-IN",{day:"numeric",month:"short",year:"numeric"});
 D.members.forEach((m,i)=>{if(!m.id)m.id=Date.now()+i;if(m.active===undefined)m.active=true});D.att=D.att||{};D.pay=D.pay||[];D.rem=D.rem||{};
-let tab="today",authed=false,q="",flt="all",ad=iso(new Date()),payFor=null,pre={};
+let role="owner",tab="today",authed=false,q="",flt="all",ad=iso(new Date()),payFor=null,pre={};
 const dleft=m=>Math.round((ld(m.end)-ld(iso(new Date())))/864e5);
 const due=()=>D.members.filter(m=>m.active&&dleft(m)>=0&&dleft(m)<=2);
 const wl=(p,t)=>"https://wa.me/91"+String(p).replace(/\D/g,"").slice(-10)+"?text="+encodeURIComponent(t);
@@ -303,14 +305,14 @@ function pf(){const m=payFor!="new"?D.members.find(x=>x.id==payFor):null,p=D.pla
 return `<form id="pf" class="card" style="margin-bottom:16px"><h3>${m?"Record payment – "+esc(m.name):"Add new member"}</h3>${m?"":`<div class="row2"><div><label for="pN">Full name</label><input id="pN" required value="${esc(pre.name||"")}"></div><div><label for="pP">Mobile (10 digits)</label><input id="pP" required inputmode="tel" value="${esc(pre.phone||"")}"></div></div>`}<div class="row2"><div><label for="pPl">Plan</label><select id="pPl">${p.map((x,i)=>`<option value="${i}">${esc(x.n)} (${inr(x.p)}/mo)</option>`).join("")}</select></div><div><label for="pMo">Duration</label><select id="pMo"><option value="1">1 month</option><option value="3">3 months</option><option value="6">6 months</option><option value="12">12 months</option></select></div></div><div class="row2"><div><label for="pAm">Amount received (₹)</label><input id="pAm" type="number" value="${p[0].p}"></div><div><label for="pMd">Paid by</label><select id="pMd"><option>Cash</option><option>UPI</option><option>Card</option></select></div></div>${m?`<p style="color:var(--mut);font-size:14px">New expiry is counted from ${m.end>iso(new Date())?"the current expiry date ("+fd(m.end)+")":"today"}.</p>`:""}<p><button class="btn">Save</button> <button type="button" class="btn ghost" data-a="cancel">Cancel</button></p></form>`}
 
 function adm(){const B=$("adminBody"),T=iso(new Date()),dr=due(),mk=T.slice(0,7),mr=D.pay.filter(p=>p.date.startsWith(mk)).reduce((s,p)=>s+p.amt,0),live=D.members.filter(m=>m.active&&dleft(m)>=0).length;
-let h=`<div class="stats"><div><b>${(D.att[T]||[]).length}</b>Present today</div><div><b>${live}</b>Active members</div><div><b>${dr.length}</b>Renewals due (2 days)</div><div><b>${inr(mr)}</b>Collected this month</div></div><div class="tabs">${[["today","Today"],["mem","Members"],["rem","Reminders"+(dr.length?" ("+dr.length+")":"")],["rev","Payments"],["enq","Enquiries"],["set","Settings"]].map(t=>`<button aria-pressed="${tab==t[0]}" data-a="tab" data-v="${t[0]}">${t[1]}</button>`).join("")}<button style="margin-left:auto" data-a="out">Log out</button></div>`;
+let h=`<div class="stats"><div><b>${(D.att[T]||[]).length}</b>Present today</div><div><b>${live}</b>Active members</div><div><b>${dr.length}</b>Renewals due (2 days)</div>${role=="owner"?`<div><b>${inr(mr)}</b>Collected this month</div>`:""}</div><div class="tabs">${[["today","Today"],["mem","Members"],["rem","Reminders"+(dr.length?" ("+dr.length+")":"")],["rev","Payments"],["enq","Enquiries"],["set","Settings"]].filter(t=>role=="owner"||["today","mem","rem"].includes(t[0])).map(t=>`<button aria-pressed="${tab==t[0]}" data-a="tab" data-v="${t[0]}">${t[1]}</button>`).join("")}<button style="margin-left:auto" data-a="out">Log out</button></div>`;
 const srch=`<label for="sq">Search</label><input id="sq" placeholder="Name or phone" value="${esc(q)}">`,match=m=>!q||(m.name+m.phone).toLowerCase().includes(q.toLowerCase());
 if(tab=="today"){const ids=D.att[ad]||[],L2=D.members.filter(m=>m.active&&match(m));
 h+=`<div class="row2"><div><label for="ad">Date</label><input type="date" id="ad" value="${ad}" max="${T}"></div><div>${srch}</div></div><p><b>${ids.length}</b> member${ids.length==1?"":"s"} checked in on ${fd(ad)}.</p>`+(L2.length?`<div class="tw"><table>${L2.map(m=>{const s=st(m),on=ids.includes(m.id);return `<tr><td>${esc(m.name)}</td><td>${esc(m.plan||"")}</td><td><span class="tag ${s[1]}">${s[0]}</span></td><td><button class="btn sm${on?" ghost":""}" data-a="ci" data-v="${m.id}">${on?"Present ✓":"Check in"}</button></td></tr>`}).join("")}</table></div>`:`<div class="empty">No active members found. Add members in the Members tab.</div>`);
 const wk=[...Array(7)].map((_,i)=>{const d=new Date();d.setDate(d.getDate()-i);return iso(d)});
 h+=`<p style="margin-top:18px"><b>Last 7 days:</b> ${wk.map(d=>fd(d).slice(0,6)+": "+(D.att[d]||[]).length).join(" · ")}</p>`}
 if(tab=="mem"){const L2=D.members.filter(match).filter(m=>flt=="all"||(flt=="act"?m.active&&dleft(m)>=0:flt=="off"?!m.active:flt=="exp"?m.active&&dleft(m)<0:m.active&&dleft(m)>=0&&dleft(m)<=7));
-h+=(payFor?pf():`<p><button class="btn" data-a="new">+ Add new member</button></p>`)+`<div class="row2"><div>${srch}</div><div><label for="fl">Show</label><select id="fl" data-a="flt">${[["all","All members"],["act","Active"],["soon","Expiring in 7 days"],["exp","Expired"],["off","Inactive"]].map(o=>`<option value="${o[0]}"${flt==o[0]?" selected":""}>${o[1]}</option>`).join("")}</select></div></div>`+(L2.length?`<p><button class="btn sm" data-a="x" data-v="mem">Download CSV</button></p><div class="tw"><table><tr><th>Name</th><th>Phone</th><th>Plan</th><th>Expires</th><th>Status</th><th>Actions</th></tr>${L2.map(m=>{const s=st(m);return `<tr><td>${esc(m.name)}</td><td><a href="tel:${esc(m.phone)}">${esc(m.phone)}</a></td><td>${esc(m.plan||"-")}</td><td>${fd(m.end)}</td><td><span class="tag ${s[1]}">${s[0]}</span></td><td><button class="btn sm" data-a="pay" data-v="${m.id}">Record payment</button> <button class="btn sm ghost" data-a="tg" data-v="${m.id}">${m.active?"Set inactive":"Set active"}</button> <button class="btn sm red" data-a="dm" data-v="${m.id}" aria-label="Delete member">✕</button></td></tr>`}).join("")}</table></div>`:`<div class="empty">No members here yet.</div>`)}
+h+=(payFor?pf():`<p><button class="btn" data-a="new">+ Add new member</button></p>`)+`<div class="row2"><div>${srch}</div><div><label for="fl">Show</label><select id="fl" data-a="flt">${[["all","All members"],["act","Active"],["soon","Expiring in 7 days"],["exp","Expired"],["off","Inactive"]].map(o=>`<option value="${o[0]}"${flt==o[0]?" selected":""}>${o[1]}</option>`).join("")}</select></div></div>`+(L2.length?`<p><button class="btn sm" data-a="x" data-v="mem">Download CSV</button></p><div class="tw"><table><tr><th>Name</th><th>Phone</th><th>Plan</th><th>Expires</th><th>Status</th><th>Actions</th></tr>${L2.map(m=>{const s=st(m);return `<tr><td>${esc(m.name)}</td><td><a href="tel:${esc(m.phone)}">${esc(m.phone)}</a></td><td>${esc(m.plan||"-")}</td><td>${fd(m.end)}</td><td><span class="tag ${s[1]}">${s[0]}</span></td><td><button class="btn sm" data-a="pay" data-v="${m.id}">Record payment</button> <button class="btn sm ghost" data-a="tg" data-v="${m.id}">${m.active?"Set inactive":"Set active"}</button> ${role=="owner"?`<button class="btn sm red" data-a="dm" data-v="${m.id}" aria-label="Delete member">✕</button>`:""}</td></tr>`}).join("")}</table></div>`:`<div class="empty">No members here yet.</div>`)}
 if(tab=="rem")h+=`<p style="color:var(--mut)">Active members whose plan ends within 2 days. WhatsApp opens with the message ready and you press send. Inactive members are never listed.</p>`+(dr.length?`<p><a class="btn" target="_blank" rel="noopener" href="${wl(CFG.phone,omsg())}">Send today's list to my WhatsApp</a></p><div class="tw"><table>${dr.map(m=>{const k=m.id+m.end;return `<tr><td>${esc(m.name)}</td><td>${esc(m.plan)}</td><td>ends ${fd(m.end)}</td><td>${D.rem[k]?'<span class="tag ok">Sent</span>':'<span class="tag warn">Pending</span>'}</td><td><a class="btn sm" target="_blank" rel="noopener" data-rem="${k}" href="${wl(m.phone,cmsg(m))}">Remind client</a> <button class="btn sm ghost" data-a="pay" data-v="${m.id}">Renewed? Record payment</button></td></tr>`}).join("")}</table></div>`:`<div class="empty">No renewals due in the next 2 days.</div>`);
 if(tab=="rev"){const ms=[...Array(6)].map((_,i)=>{const d=new Date();d.setDate(1);d.setMonth(d.getMonth()-i);return iso(d).slice(0,7)}),tot=ms.map(k=>D.pay.filter(p=>p.date.startsWith(k)).reduce((s,p)=>s+p.amt,0)),mx=Math.max(...tot,1);
 h+=`<h3 style="margin-bottom:10px">Monthly collection</h3>`+ms.map((k,i)=>`<div style="display:grid;grid-template-columns:90px 1fr 100px;gap:10px;align-items:center;margin:6px 0"><span>${new Date(k+"-01T00:00:00").toLocaleDateString("en-IN",{month:"short",year:"numeric"})}</span><div class="meter" style="background:var(--line);margin:0"><i style="width:${tot[i]/mx*100}%;background:var(--ink)"></i></div><b>${inr(tot[i])}</b></div>`).join("")+`<h3 style="margin:20px 0 8px">Payment history</h3>`+(D.pay.length?`<p><button class="btn sm" data-a="x" data-v="pay">Download CSV</button></p><div class="tw"><table><tr><th>Date</th><th>Member</th><th>Plan</th><th>Amount</th><th>Mode</th><th></th></tr>${D.pay.slice(0,40).map(p=>`<tr><td>${fd(p.date)}</td><td>${esc(p.name)}</td><td>${esc(p.plan)} · ${p.mo}m</td><td>${inr(p.amt)}</td><td>${p.mode}</td><td><button class="btn sm red" data-a="dp" data-v="${p.id}" aria-label="Delete payment">✕</button></td></tr>`).join("")}</table></div>`:`<div class="empty">Payments you record appear here.</div>`)}
@@ -318,11 +320,11 @@ if(tab=="enq")h+=D.enq.length?`<div class="tw"><table><tr><th>Date</th><th>Name<
 if(tab=="set")h+=`<h3>Plan prices (₹ per month)</h3><div class="row2">${D.plans.map((p,i)=>`<div><label>${esc(p.n)}</label><input type="number" data-pi="${i}" value="${p.p}"></div>`).join("")}</div><p><button class="btn" data-a="sp">Save prices</button></p><label for="bt">Notice bar on website (empty to hide)</label><input id="bt" value="${esc(D.banner)}"><p><button class="btn" data-a="sb">Save notice</button></p><h3 style="margin-top:20px">Backup</h3><p style="color:var(--mut)">Data is stored in this browser. Download a backup regularly.</p><p><button class="btn sm" data-a="bk">Download backup</button> <label class="btn sm ghost" style="display:inline-block;margin:0;cursor:pointer">Restore backup<input type="file" id="rf" accept=".json" hidden></label></p>`;
 B.innerHTML=h}
 
-function login(){$("adminBody").innerHTML=`<form id="lf" style="max-width:320px"><label for="pin">Owner PIN</label><input id="pin" type="password" inputmode="numeric" autocomplete="off"><p id="lE" style="color:var(--bad)"></p><button class="btn">Open dashboard</button><p style="color:var(--mut);font-size:13px">Demo PIN: 1234. Change it in the CFG block at the top of the page code.</p></form>`}
+function login(){$("adminBody").innerHTML=`<form id="lf" style="max-width:320px"><label for="pin">Owner PIN</label><input id="pin" type="password" inputmode="numeric" autocomplete="off"><p id="lE" style="color:var(--bad)"></p><button class="btn">Open dashboard</button><p style="color:var(--mut);font-size:13px">Owner and staff each have their own PIN. The dashboard locks again when you close it.</p></form>`}
 function openAdmin(){$("admin").showModal();authed?adm():login()}
-const B0=$("adminBody");
+const B0=$("adminBody");$("admin").addEventListener("close",()=>{authed=false});
 B0.onsubmit=e=>{e.preventDefault();const f=e.target.id,T=iso(new Date());
-if(f=="lf"){if($("pin").value===CFG.pin){authed=true;adm();const n=due().length;if(n)toast(n+" renewal reminder"+(n>1?"s":"")+" due. Open the Reminders tab.")}else $("lE").textContent="Wrong PIN.";return}
+if(f=="lf"){const pv=$("pin").value;if(pv===CFG.pin||pv===CFG.staff){authed=true;role=pv===CFG.pin?"owner":"staff";tab="today";adm();const n=due().length;if(n)toast(n+" renewal reminder"+(n>1?"s":"")+" due. Open the Reminders tab.")}else $("lE").textContent="Wrong PIN.";return}
 if(f=="pf"){const pl=D.plans[+$("pPl").value],mo=+$("pMo").value,amt=+$("pAm").value;let m=payFor=="new"?null:D.members.find(x=>x.id==payFor);
 if(!m){const n=$("pN").value.trim(),p=$("pP").value.replace(/\D/g,"").slice(-10);if(n.length<2||p.length!=10){toast("Enter a name and a 10-digit mobile");return}m={id:Date.now(),name:n,phone:p,joined:T,end:T,active:true};D.members.unshift(m)}
 const b=ld(m.end>T?m.end:T);b.setMonth(b.getMonth()+mo);m.end=iso(b);m.plan=pl.n;m.active=true;
