@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Claude Fitness – Gym in Sanganer, Jaipur</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Barlow:wght@400;500;600&display=swap">
+<style>
+:root{--ink:#14183a;--bg:#eef1f6;--card:#fff;--tx:#1b1f3b;--mut:#5b6080;--sig:#f2d13d;--line:#d6dbe7;--ok:#1f9d55;--bad:#d64545;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root:not([data-theme="light"]){}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1130;--card:#181c45;--tx:#e9ecf8;--mut:#9aa0c8;--line:#2b3066;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1130;--card:#181c45;--tx:#e9ecf8;--mut:#9aa0c8;--line:#2b3066;color-scheme:dark}
+*,*:before,*:after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 16px/1.6 Barlow,system-ui,sans-serif}
+h1,h2,h3{font-family:'Barlow Condensed',Impact,sans-serif;font-weight:800;line-height:1;margin:0;text-transform:uppercase;letter-spacing:.01em}
+h2{font-size:clamp(34px,6vw,56px);margin-bottom:10px}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--sig);outline-offset:2px}
+.wrap{max-width:1120px;margin:auto;padding:0 20px}
+section{padding:72px 0}
+.sub{color:var(--mut);max-width:60ch;margin:0 0 32px}
+.btn{display:inline-block;border:0;cursor:pointer;background:var(--sig);color:#14183a;font-weight:600;padding:13px 24px;border-radius:4px;text-decoration:none;font-size:16px}
+.btn.ghost{background:transparent;color:inherit;border:2px solid currentColor}
+.btn.sm{padding:7px 14px;font-size:14px}
+.btn.red{background:var(--bad);color:#fff}
+#bar{background:var(--sig);color:#14183a;text-align:center;padding:8px 40px;font-weight:600;font-size:15px;position:relative}
+#bar button{position:absolute;right:10px;top:4px;background:none;border:0;font-size:22px;cursor:pointer}
+header{position:sticky;top:0;z-index:20;background:var(--ink);color:#fff;padding-top:env(safe-area-inset-top,0px)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font:800 26px 'Barlow Condensed';text-transform:uppercase;text-decoration:none;letter-spacing:.02em}
+.logo b{background:var(--sig);color:var(--ink);padding:0 6px;margin-right:4px}
+nav{display:flex;gap:22px;align-items:center}
+nav a{text-decoration:none;font-weight:500;font-size:15px;opacity:.85}
+nav a:hover{opacity:1;color:var(--sig)}
+#menu{display:none;background:none;border:2px solid #fff;color:#fff;border-radius:4px;padding:4px 12px;cursor:pointer}
+@media(max-width:820px){#menu{display:block}nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--ink);flex-direction:column;padding:16px 20px 24px;align-items:flex-start}nav.open{display:flex}}
+.hero{background:var(--ink);color:#fff;padding:64px 0 0;overflow:hidden}
+.hero .grid{display:grid;grid-template-columns:1.3fr 1fr;gap:32px;align-items:end}
+.hero h1{font-size:clamp(56px,11vw,150px);line-height:.88}
+.hero h1 span{display:block;color:transparent;-webkit-text-stroke:2px var(--sig)}
+.hero p{max-width:46ch;color:#c9cdea;font-size:18px;margin:22px 0}
+.status{display:inline-flex;gap:8px;align-items:center;background:#ffffff14;padding:6px 14px;border-radius:99px;font-size:14px;margin-bottom:18px}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--bad)}.dot.on{background:#3ddc84;animation:p 1.6s infinite}
+@keyframes p{50%{opacity:.35}}
+.crowd{background:#ffffff10;border-radius:8px 8px 0 0;padding:22px}
+.crowd h3{font-size:22px;color:var(--sig)}
+.meter{height:14px;background:#ffffff1f;border-radius:7px;margin:12px 0 6px;overflow:hidden}
+.meter i{display:block;height:100%;background:linear-gradient(90deg,#3ddc84,var(--sig),#ff7a59);transition:width .8s}
+.ticker{background:var(--sig);color:var(--ink);font:800 22px 'Barlow Condensed';text-transform:uppercase;white-space:nowrap;overflow:hidden;padding:10px 0;margin-top:56px}
+.ticker div{display:inline-block;animation:t 28s linear infinite}
+@keyframes t{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.ticker div,.dot.on{animation:none}html{scroll-behavior:auto}}
+@media(max-width:820px){.hero .grid{grid-template-columns:1fr}}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);padding:24px}
+.card h3{font-size:28px;margin-bottom:8px}
+.price{font:800 48px 'Barlow Condensed';line-height:1}.price small{font:400 15px Barlow;color:var(--mut)}
+.plan ul{padding-left:18px;color:var(--mut);margin:14px 0 20px}
+.plan.best{border:3px solid var(--sig);position:relative}
+.plan.best:before{content:'Most picked';position:absolute;top:-14px;left:16px;background:var(--sig);color:var(--ink);font-weight:600;font-size:13px;padding:2px 10px}
+.seg{display:inline-flex;border:2px solid var(--ink);border-radius:4px;overflow:hidden;margin-bottom:28px}
+.seg button{border:0;background:transparent;padding:9px 18px;cursor:pointer;font-weight:600;color:var(--tx)}
+.seg button[aria-pressed=true]{background:var(--ink);color:#fff}
+.days{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px}
+.days button{border:1px solid var(--line);background:var(--card);padding:8px 14px;cursor:pointer;border-radius:4px;font-weight:600}
+.days button[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.cls{display:grid;grid-template-columns:88px 1fr auto;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.cls time{font:800 24px 'Barlow Condensed'}
+.cls span{color:var(--mut);font-size:14px;display:block}
+.tr{text-align:left}
+.av{width:72px;height:72px;border-radius:50%;background:var(--ink);color:var(--sig);display:grid;place-items:center;font:800 28px 'Barlow Condensed';margin-bottom:12px}
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+@media(max-width:820px){.calc{grid-template-columns:1fr}}
+label{display:block;font-weight:600;font-size:14px;margin:12px 0 4px}
+input,select,textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:4px;background:var(--card)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.res{background:var(--ink);color:#fff;padding:24px;border-radius:4px}
+.res b{font:800 56px 'Barlow Condensed';color:var(--sig);display:block;line-height:1}
+.dark{background:var(--ink);color:#fff}.dark .sub{color:#b9bde0}
+.dark .card{background:#ffffff0f;border-color:#ffffff22}
+.q{border-bottom:1px solid var(--line);padding:14px 0}
+.q summary{cursor:pointer;font-weight:600;font-size:18px}.q p{color:var(--mut);margin:8px 0 0}
+footer{background:#0a0c24;color:#b9bde0;padding:40px 0 100px}
+footer .cards{gap:32px}footer h3{color:#fff;font-size:22px;margin-bottom:8px}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;display:flex;flex-direction:column;gap:10px}
+.fab a,.fab button{width:54px;height:54px;border-radius:50%;border:0;background:#25d366;color:#fff;display:grid;place-items:center;font-size:24px;cursor:pointer;text-decoration:none;box-shadow:0 4px 14px #0004}
+.fab button{background:var(--sig);color:var(--ink);font-weight:800;font-size:18px}
+#toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%) translateY(20px);background:#fff;color:#14183a;padding:12px 22px;border-radius:4px;font-weight:600;opacity:0;pointer-events:none;transition:.3s;z-index:60;box-shadow:0 6px 20px #0004;max-width:90%}
+#toast.show{opacity:1;transform:translateX(-50%)}
+dialog{border:0;border-radius:6px;padding:0;width:min(960px,94vw);max-height:90vh;background:var(--bg);color:var(--tx)}
+dialog::backdrop{background:#000a}
+.dh{display:flex;justify-content:space-between;align-items:center;background:var(--ink);color:#fff;padding:14px 20px;position:sticky;top:0}
+.dh h3{font-size:26px}.dh button{background:none;border:0;color:#fff;font-size:26px;cursor:pointer}
+.db{padding:20px}
+.tabs{display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap}
+.tabs button{border:1px solid var(--line);background:var(--card);padding:8px 14px;cursor:pointer;border-radius:4px;font-weight:600}
+.tabs button[aria-pressed=true]{background:var(--sig);color:#14183a;border-color:var(--sig)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-bottom:18px}
+.stats div{background:var(--card);border:1px solid var(--line);padding:12px}.stats b{font:800 34px 'Barlow Condensed';display:block}
+.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
+.tag{padding:2px 8px;border-radius:99px;font-size:12px;font-weight:600;background:var(--line)}
+.tag.ok{background:#c8f0d8;color:#0c5b2c}.tag.bad{background:#fbd4d4;color:#8a1f1f}
+.empty{color:var(--mut);padding:24px;text-align:center}
+.tag.warn{background:#ffe9a8;color:#6b4d00}td .btn{margin:2px 0}.btn.ghost{color:inherit}
+:root{--ink:#17493f;--bg:#f7f5f2;--card:#fff;--tx:#25302c;--mut:#667068;--sig:#1f7a68;--line:#e6e1da;--hero:linear-gradient(150deg,#e6f1ec,#f8ece7);--soft:#efeae4}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111917;--card:#1a2420;--tx:#eaf1ed;--mut:#9db0a6;--line:#2c3a34;--hero:linear-gradient(150deg,#16231f,#231b1d);--soft:#16201c;--sig:#2b8f7a}}
+:root[data-theme="dark"]{--bg:#111917;--card:#1a2420;--tx:#eaf1ed;--mut:#9db0a6;--line:#2c3a34;--hero:linear-gradient(150deg,#16231f,#231b1d);--soft:#16201c;--sig:#2b8f7a}
+header{background:var(--card);color:var(--tx);border-bottom:1px solid var(--line)}
+nav a{opacity:1;color:var(--tx)}nav a:hover{color:var(--sig)}nav a.btn,nav a.btn:hover{color:#fff}
+#menu{border-color:var(--tx);color:var(--tx)}
+@media(max-width:820px){nav{background:var(--card)}}
+.logo b{background:var(--ink);color:#fff;border-radius:4px}
+.btn{color:#fff;border-radius:999px}.btn.ghost{background:transparent;color:inherit}
+.hero{background:var(--hero);color:var(--tx)}
+.hero p{color:var(--mut)}
+.status{background:var(--card);border:1px solid var(--line)}
+.crowd{background:var(--card);border:1px solid var(--line);border-radius:16px 16px 0 0;box-shadow:0 12px 32px #1f3a3014}
+.crowd h3{color:var(--sig)}#crowdTxt{color:var(--mut)!important}
+.meter{background:var(--line)}.meter i{background:linear-gradient(90deg,#7cc9a9,#e6b8a8,#d98a7a)}
+.ticker{background:var(--ink);color:#f3dfd6}
+.dark{background:var(--soft);color:var(--tx)}.dark .sub{color:var(--mut)}.dark .card{background:var(--card);border-color:var(--line)}
+.card{border-radius:16px;box-shadow:0 1px 2px #0000000a,0 10px 28px #1f3a3010}
+input,select,textarea{border-radius:10px}
+.plan.best{border-color:var(--sig)}.plan.best:before{background:var(--sig);color:#fff;border-radius:99px}
+.av{background:#dcebe5;color:var(--ink)}
+.res{background:var(--ink);color:#fff;border-radius:16px}.res b{color:#f0cfc3}
+#bar{background:#f1d3c8;color:#4a302a}
+footer{background:var(--soft);color:var(--mut)}footer h3{color:var(--tx)}
+.tabs button[aria-pressed=true]{background:var(--sig);color:#fff;border-color:var(--sig)}
+.fab button{background:var(--ink);color:#fff}
+#toast{background:var(--ink);color:#fff}
+.seg{border-radius:999px;border-color:var(--ink)}
+.tag.ok{background:#d6efe3;color:#12603f}
+</style>
+</head>
+<body>
+<div id="bar" hidden><span id="barTxt"></span><button aria-label="Close notice" onclick="this.parentNode.hidden=true">×</button></div>
+<header><div class="wrap">
+<a class="logo" href="#top"><b>Claude</b>Fitness</a>
+<button id="menu" aria-label="Menu" aria-expanded="false">Menu</button>
+<nav id="nav"><a href="#plans">Plans</a><a href="#classes">Classes</a><a href="#team">Trainers</a><a href="#tools">BMI &amp; calories</a><a href="#faq">FAQ</a><a href="#contact">Contact</a><button class="btn sm" onclick="openAdmin()">Owner login</button><a class="btn sm" href="#join" style="opacity:1">Join now</a></nav>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap grid">
+<div>
+<div class="status"><span class="dot" id="dot"></span><span id="stat">Checking hours…</span></div>
+<h1>Lift <span>harder.</span></h1>
+<p>Free weights, a full cardio floor and coaches who know your name. Right on New Sanganer Road, a few minutes from Sanganer bazaar.</p>
+<a class="btn" href="#join">Book a free trial day</a> <a class="btn ghost" href="#plans">See pricing</a>
+</div>
+<div class="crowd"><h3>Floor right now</h3><div class="meter"><i id="meter" style="width:0"></i></div><div id="crowdTxt" style="color:#c9cdea;font-size:15px"></div>
+<p style="font-size:14px;margin:14px 0 0">Estimated from usual busy hours. Quietest: 9–11 am.</p></div>
+</div>
+<div class="ticker"><div>Strength ✦ Cardio ✦ Zumba ✦ Yoga ✦ CrossFit ✦ Diet plans ✦ Personal training ✦ Strength ✦ Cardio ✦ Zumba ✦ Yoga ✦ CrossFit ✦ Diet plans ✦ Personal training ✦ </div></div>
+</div>
+
+<section id="plans"><div class="wrap">
+<h2>Membership plans</h2><p class="sub">No joining-fee tricks. Pick a plan, pay at the front desk or by UPI, and start the same day.</p>
+<div class="seg" id="billSeg"></div>
+<div class="cards" id="planGrid"></div>
+</div></section>
+
+<section id="classes" class="dark"><div class="wrap">
+<h2>Class timetable</h2><p class="sub">All group classes are included in every plan except Basic. Book a spot with one tap.</p>
+<div class="days" id="days"></div><div id="clsList"></div>
+</div></section>
+
+<section id="team"><div class="wrap">
+<h2>Your coaches</h2><p class="sub">Certified, local and easy to talk to.</p>
+<div class="cards" id="trainers"></div>
+</div></section>
+
+<section id="tools" style="background:var(--card)"><div class="wrap">
+<h2>BMI &amp; daily calories</h2><p class="sub">A quick starting point. Your coach will fine-tune it on day one.</p>
+<div class="calc"><div>
+<div class="row2"><div><label for="cA">Age</label><input id="cA" type="number" value="25"></div><div><label for="cG">Gender</label><select id="cG"><option>Male</option><option>Female</option></select></div></div>
+<div class="row2"><div><label for="cH">Height (cm)</label><input id="cH" type="number" value="170"></div><div><label for="cW">Weight (kg)</label><input id="cW" type="number" value="70"></div></div>
+<label for="cAct">Activity</label><select id="cAct"><option value="1.2">Desk job, little exercise</option><option value="1.375" selected>Train 1–3 days a week</option><option value="1.55">Train 4–5 days a week</option><option value="1.725">Train daily</option></select>
+<label for="cGoal">Goal</label><select id="cGoal"><option value="-400">Lose fat</option><option value="0" selected>Stay the same</option><option value="350">Build muscle</option></select>
+<p><button class="btn" id="calcBtn">Calculate</button></p></div>
+<div class="res" aria-live="polite" id="calcOut">Fill in your details and press Calculate.</div></div>
+</div></section>
+
+<section id="join" class="dark"><div class="wrap">
+<h2>Join or book a free trial</h2><p class="sub">Send your details. We call back within a day. Nothing is charged online.</p>
+<form id="form" class="card" style="max-width:640px" novalidate>
+<label for="fN">Full name</label><input id="fN" required autocomplete="name">
+<div class="row2"><div><label for="fP">Mobile number</label><input id="fP" inputmode="tel" required autocomplete="tel" placeholder="10 digits"></div><div><label for="fPl">Interested in</label><select id="fPl"></select></div></div>
+<label for="fM">Message (optional)</label><textarea id="fM" rows="3" placeholder="Goal, preferred timing…"></textarea>
+<p id="fErr" style="color:#ff9b9b;margin:8px 0" role="alert"></p>
+<button class="btn" type="submit">Send enquiry</button>
+</form>
+</div></section>
+
+<section id="faq"><div class="wrap" style="max-width:780px">
+<h2>Good to know</h2><div style="margin-top:20px">
+<details class="q"><summary>Is there a free trial?</summary><p>Yes. One free day pass for first-time visitors. Bring a photo ID.</p></details>
+<details class="q"><summary>Do you have separate timings for women?</summary><p>Ladies-only batch runs 9–11 am on weekdays with a female trainer.</p></details>
+<details class="q"><summary>Can I freeze my membership?</summary><p>Quarterly and yearly members can pause for up to 15 days with notice.</p></details>
+<details class="q"><summary>What should I bring?</summary><p>Sports shoes, a towel and a water bottle. Lockers are free to use.</p></details>
+<details class="q"><summary>Do you offer diet guidance?</summary><p>Basic meal guidance is included in Pro and Elite plans.</p></details>
+</div></div></section>
+</main>
+
+<footer id="contact"><div class="wrap"><div class="cards">
+<div><h3>Claude Fitness</h3><p>245, New Sanganer Road,<br>Sanganer, Jaipur, Rajasthan</p><a class="btn sm" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=245+New+Sanganer+Road+Sanganer+Jaipur">Get directions</a></div>
+<div><h3>Hours</h3><div id="hrs"></div></div>
+<div><h3>Reach us</h3><p><a id="telL" href="#"></a><br><a id="waL" target="_blank" rel="noopener" href="#">Chat on WhatsApp</a></p><p style="font-size:14px">© <span id="yr"></span> Claude Fitness</p></div>
+</div></div></footer>
+
+<div class="fab"><a id="waF" target="_blank" rel="noopener" aria-label="WhatsApp" href="#">✆</a><button aria-label="Toggle dark mode" id="thm">◐</button></div>
+<div id="toast" role="status"></div>
+
+<dialog id="admin"><div class="dh"><h3>Owner dashboard</h3><button aria-label="Close" onclick="admin.close()">×</button></div><div class="db" id="adminBody"></div></dialog>
+
+<script>
+const CFG={phone:"919999999999",display:"+91 99999 99999",pin:"1234",
+owner:true};
+let S={bill:1,day:new Date().getDay()||1};
+const DEF={banner:"Free trial day for first-time visitors. Walk in 5–11 AM or 5–10 PM, Monday to Saturday.",plans:[
+{id:"basic",n:"Basic",p:900,f:["Gym floor access","Cardio zone","Free lockers"]},
+{id:"pro",n:"Pro",p:1400,best:1,f:["Everything in Basic","All group classes","Diet guidance"]},
+{id:"elite",n:"Elite",p:2200,f:["Everything in Pro","2 PT sessions a month","Body check every month"]}],
+enq:[],members:[]};
+const L=(k,d)=>{try{return JSON.parse(localStorage.getItem(k))||d}catch(e){return d}};
+const W=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
+let D=L("cf_data",DEF);if(/diwali/i.test(D.banner||""))D.banner=DEF.banner;const save=()=>W("cf_data",D);
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const inr=n=>"₹"+Math.round(n).toLocaleString("en-IN");
+function toast(m){const t=$("toast");t.textContent=m;t.classList.add("show");clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove("show"),2800)}
+
+const CLASSES={1:[["6:00 AM","Strength circuit","Rohit"],["7:30 AM","Yoga flow","Neha"],["6:30 PM","CrossFit","Rohit"],["7:30 PM","Zumba","Neha"]],
+2:[["6:00 AM","HIIT","Aman"],["10:00 AM","Ladies yoga","Neha"],["6:30 PM","Core and abs","Aman"],["7:30 PM","Zumba","Neha"]],
+3:[["6:00 AM","Strength circuit","Rohit"],["7:30 AM","Mobility","Neha"],["6:30 PM","CrossFit","Rohit"],["7:30 PM","Boxing basics","Aman"]],
+4:[["6:00 AM","HIIT","Aman"],["10:00 AM","Ladies Zumba","Neha"],["6:30 PM","Powerlifting clinic","Rohit"],["7:30 PM","Yoga flow","Neha"]],
+5:[["6:00 AM","Strength circuit","Rohit"],["7:30 AM","Spin and sweat","Aman"],["6:30 PM","CrossFit","Rohit"],["7:30 PM","Zumba party","Neha"]],
+6:[["7:00 AM","Full body bootcamp","Aman"],["8:30 AM","Yoga flow","Neha"],["5:30 PM","Open lift night","Rohit"]]};
+const TR=[["Rohit Sharma","Head coach · strength","10 years coaching lifters and first-timers. Cleared to train people recovering from injuries."],
+["Neha Khandelwal","Yoga and Zumba","Runs the ladies batch. Focus on flexibility, posture and fun cardio."],
+["Aman Choudhary","HIIT and boxing","Former state-level boxer. Builds conditioning plans that fit your week."]];
+const DN=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+
+const SES=[[5,11],[17,22]];
+function status(){const n=new Date(),x=n.getHours()+n.getMinutes()/60,d=n.getDay(),cur=d!=0&&SES.find(z=>x>=z[0]&&x<z[1]);
+let m;if(cur)m="Open now · closes "+fmt(cur[1]);else{const nx=d!=0&&SES.find(z=>x<z[0]);m=nx?"Closed · opens "+fmt(nx[0]):"Closed · opens "+(d==0||d==6?"Monday":"tomorrow")+" 5 am"}
+$("dot").className="dot"+(cur?" on":"");$("stat").textContent=m;
+let lv=0,tx=d==0?"Closed on Sundays":"Closed right now";
+if(cur){lv=.3;[[5,7,.6],[7,9,.8],[9,11,.35],[17,18.5,.55],[18.5,21,.95],[21,22,.35]].forEach(r=>{if(x>=r[0]&&x<r[1])lv=r[2]});tx=lv>.75?"Busy. Expect a short wait on benches.":lv>.4?"Moderate. Good time to train.":"Quiet. Plenty of space."}
+$("meter").style.width=Math.round(lv*100)+"%";$("crowdTxt").textContent=tx}
+const fmt=h=>{const a=h>=12?"pm":"am",k=h%12||12;return k+" "+a};
+
+function renderPlans(){
+$("billSeg").innerHTML=[["Monthly",1,0],["3 months",3,.1],["Yearly",12,.25]].map(b=>`<button aria-pressed="${S.bill==b[1]}" data-b="${b[1]}">${b[0]}${b[2]?` · save ${b[2]*100}%`:""}</button>`).join("");
+const disc={1:0,3:.1,12:.25}[S.bill];
+$("planGrid").innerHTML=D.plans.map(p=>{const m=p.p*(1-disc);return `<article class="card plan${p.best?" best":""}"><h3>${esc(p.n)}</h3><div class="price">${inr(m)}<small> /month</small></div>${S.bill>1?`<small style="color:var(--mut)">${inr(m*S.bill)} billed for ${S.bill==12?"12":"3"} months</small>`:""}<ul>${p.f.map(f=>`<li>${esc(f)}</li>`).join("")}</ul><a class="btn" href="#join" data-pl="${esc(p.n)}">Choose ${esc(p.n)}</a></article>`}).join("");
+$("fPl").innerHTML=D.plans.map(p=>`<option>${esc(p.n)}</option>`).join("")+"<option>Free trial day</option><option>Personal training</option>"}
+$("billSeg").onclick=e=>{const b=e.target.closest("button");if(b){S.bill=+b.dataset.b;renderPlans()}};
+$("planGrid").onclick=e=>{const a=e.target.closest("[data-pl]");if(a)$("fPl").value=a.dataset.pl};
+
+function renderClasses(){
+$("days").innerHTML=[1,2,3,4,5,6].map(d=>`<button aria-pressed="${S.day==d}" data-d="${d}">${DN[d]}</button>`).join("");
+const bk=L("cf_book",{});
+$("clsList").innerHTML=CLASSES[S.day].map((c,i)=>{const k=S.day+"-"+i,on=bk[k];return `<div class="cls"><time>${c[0]}</time><div>${c[1]}<span>with ${c[2]}</span></div><button class="btn sm${on?" ghost":""}" data-k="${k}" data-n="${esc(c[1])}">${on?"Booked ✓":"Book spot"}</button></div>`}).join("")}
+$("days").onclick=e=>{const b=e.target.closest("button");if(b){S.day=+b.dataset.d;renderClasses()}};
+$("clsList").onclick=e=>{const b=e.target.closest("button");if(!b)return;const bk=L("cf_book",{});
+if(bk[b.dataset.k]){delete bk[b.dataset.k];toast("Booking cancelled")}else{bk[b.dataset.k]=1;toast(b.dataset.n+" booked. See you there!")}W("cf_book",bk);renderClasses()};
+
+$("trainers").innerHTML=TR.map(t=>`<article class="card tr"><div class="av">${t[0][0]}</div><h3>${t[0]}</h3><strong>${t[1]}</strong><p style="color:var(--mut)">${t[2]}</p></article>`).join("");
+
+$("calcBtn").onclick=()=>{const a=+$("cA").value,h=+$("cH").value,w=+$("cW").value;
+if(!(a>0&&h>0&&w>0)){toast("Enter valid age, height and weight");return}
+const bmi=w/((h/100)**2),cat=bmi<18.5?"Underweight":bmi<25?"Healthy range":bmi<30?"Overweight":"Obese range";
+const bmr=10*w+6.25*h-5*a+($("cG").value=="Male"?5:-161),cal=bmr*$("cAct").value+ +$("cGoal").value;
+$("calcOut").innerHTML=`BMI<b>${bmi.toFixed(1)}</b>${cat}<br><br>Daily calories<b>${Math.round(cal)} kcal</b>Protein target about ${Math.round(w*1.6)} g a day.<p style="margin-bottom:0"><a class="btn sm" href="#join">Get a plan from a coach</a></p>`};
+
+$("form").onsubmit=e=>{e.preventDefault();const n=$("fN").value.trim(),p=$("fP").value.replace(/\D/g,"").slice(-10);
+if(n.length<2){$("fErr").textContent="Please enter your name.";return}
+if(p.length!=10){$("fErr").textContent="Enter a 10-digit mobile number.";return}
+$("fErr").textContent="";
+D.enq.unshift({id:Date.now(),name:n,phone:p,plan:$("fPl").value,msg:$("fM").value.trim(),date:new Date().toISOString(),st:"New"});save();
+e.target.reset();toast("Thanks "+n.split(" ")[0]+"! We will call you soon.")};
+
+/* ---------- owner dashboard ---------- */
+const iso=d=>{const z=new Date(d.getTime()-d.getTimezoneOffset()*6e4);return z.toISOString().slice(0,10)};
+const ld=s=>new Date(s+"T00:00:00"),fd=s=>ld(s).toLocaleDateString("en-IN",{day:"numeric",month:"short",year:"numeric"});
+D.members.forEach((m,i)=>{if(!m.id)m.id=Date.now()+i;if(m.active===undefined)m.active=true});D.att=D.att||{};D.pay=D.pay||[];D.rem=D.rem||{};
+let tab="today",authed=false,q="",flt="all",ad=iso(new Date()),payFor=null,pre={};
+const dleft=m=>Math.round((ld(m.end)-ld(iso(new Date())))/864e5);
+const due=()=>D.members.filter(m=>m.active&&dleft(m)>=0&&dleft(m)<=2);
+const wl=(p,t)=>"https://wa.me/91"+String(p).replace(/\D/g,"").slice(-10)+"?text="+encodeURIComponent(t);
+const cmsg=m=>{const d=dleft(m);return `Hi ${m.name}, your ${m.plan} membership at Claude Fitness ${d==0?"expires today":"expires in "+d+" day"+(d>1?"s":"")} (${fd(m.end)}). Please renew to keep training. Timings: 5–11 AM and 5–10 PM, Sunday off. – Claude Fitness, 245 New Sanganer Road, Sanganer`};
+const omsg=()=>"Claude Fitness – renewals due:\n"+due().map(m=>`• ${m.name} (${m.phone}) – ${m.plan}, ends ${fd(m.end)}`).join("\n");
+const st=m=>{const d=dleft(m);return !m.active?["Inactive","bad"]:d<0?["Expired","bad"]:d<=2?[d+"d left","warn"]:["Active","ok"]};
+const dl=(n,t,ty)=>{const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([t],{type:ty}));a.download=n;a.click()};
+function csv(w){const r=w=="mem"?[["Name","Phone","Plan","Expires","Active"],...D.members.map(m=>[m.name,m.phone,m.plan,m.end,m.active?"Yes":"No"])]:[["Date","Member","Plan","Months","Amount","Mode"],...D.pay.map(p=>[p.date,p.name,p.plan,p.mo,p.amt,p.mode])];dl(`claude-fitness-${w}.csv`,r.map(x=>x.map(c=>`"${String(c).replace(/"/g,'""')}"`).join(",")).join("\n"),"text/csv")}
+
+function pf(){const m=payFor!="new"?D.members.find(x=>x.id==payFor):null,p=D.plans;
+return `<form id="pf" class="card" style="margin-bottom:16px"><h3>${m?"Record payment – "+esc(m.name):"Add new member"}</h3>${m?"":`<div class="row2"><div><label for="pN">Full name</label><input id="pN" required value="${esc(pre.name||"")}"></div><div><label for="pP">Mobile (10 digits)</label><input id="pP" required inputmode="tel" value="${esc(pre.phone||"")}"></div></div>`}<div class="row2"><div><label for="pPl">Plan</label><select id="pPl">${p.map((x,i)=>`<option value="${i}">${esc(x.n)} (${inr(x.p)}/mo)</option>`).join("")}</select></div><div><label for="pMo">Duration</label><select id="pMo"><option value="1">1 month</option><option value="3">3 months</option><option value="6">6 months</option><option value="12">12 months</option></select></div></div><div class="row2"><div><label for="pAm">Amount received (₹)</label><input id="pAm" type="number" value="${p[0].p}"></div><div><label for="pMd">Paid by</label><select id="pMd"><option>Cash</option><option>UPI</option><option>Card</option></select></div></div>${m?`<p style="color:var(--mut);font-size:14px">New expiry is counted from ${m.end>iso(new Date())?"the current expiry date ("+fd(m.end)+")":"today"}.</p>`:""}<p><button class="btn">Save</button> <button type="button" class="btn ghost" data-a="cancel">Cancel</button></p></form>`}
+
+function adm(){const B=$("adminBody"),T=iso(new Date()),dr=due(),mk=T.slice(0,7),mr=D.pay.filter(p=>p.date.startsWith(mk)).reduce((s,p)=>s+p.amt,0),live=D.members.filter(m=>m.active&&dleft(m)>=0).length;
+let h=`<div class="stats"><div><b>${(D.att[T]||[]).length}</b>Present today</div><div><b>${live}</b>Active members</div><div><b>${dr.length}</b>Renewals due (2 days)</div><div><b>${inr(mr)}</b>Collected this month</div></div><div class="tabs">${[["today","Today"],["mem","Members"],["rem","Reminders"+(dr.length?" ("+dr.length+")":"")],["rev","Payments"],["enq","Enquiries"],["set","Settings"]].map(t=>`<button aria-pressed="${tab==t[0]}" data-a="tab" data-v="${t[0]}">${t[1]}</button>`).join("")}<button style="margin-left:auto" data-a="out">Log out</button></div>`;
+const srch=`<label for="sq">Search</label><input id="sq" placeholder="Name or phone" value="${esc(q)}">`,match=m=>!q||(m.name+m.phone).toLowerCase().includes(q.toLowerCase());
+if(tab=="today"){const ids=D.att[ad]||[],L2=D.members.filter(m=>m.active&&match(m));
+h+=`<div class="row2"><div><label for="ad">Date</label><input type="date" id="ad" value="${ad}" max="${T}"></div><div>${srch}</div></div><p><b>${ids.length}</b> member${ids.length==1?"":"s"} checked in on ${fd(ad)}.</p>`+(L2.length?`<div class="tw"><table>${L2.map(m=>{const s=st(m),on=ids.includes(m.id);return `<tr><td>${esc(m.name)}</td><td>${esc(m.plan||"")}</td><td><span class="tag ${s[1]}">${s[0]}</span></td><td><button class="btn sm${on?" ghost":""}" data-a="ci" data-v="${m.id}">${on?"Present ✓":"Check in"}</button></td></tr>`}).join("")}</table></div>`:`<div class="empty">No active members found. Add members in the Members tab.</div>`);
+const wk=[...Array(7)].map((_,i)=>{const d=new Date();d.setDate(d.getDate()-i);return iso(d)});
+h+=`<p style="margin-top:18px"><b>Last 7 days:</b> ${wk.map(d=>fd(d).slice(0,6)+": "+(D.att[d]||[]).length).join(" · ")}</p>`}
+if(tab=="mem"){const L2=D.members.filter(match).filter(m=>flt=="all"||(flt=="act"?m.active&&dleft(m)>=0:flt=="off"?!m.active:flt=="exp"?m.active&&dleft(m)<0:m.active&&dleft(m)>=0&&dleft(m)<=7));
+h+=(payFor?pf():`<p><button class="btn" data-a="new">+ Add new member</button></p>`)+`<div class="row2"><div>${srch}</div><div><label for="fl">Show</label><select id="fl" data-a="flt">${[["all","All members"],["act","Active"],["soon","Expiring in 7 days"],["exp","Expired"],["off","Inactive"]].map(o=>`<option value="${o[0]}"${flt==o[0]?" selected":""}>${o[1]}</option>`).join("")}</select></div></div>`+(L2.length?`<p><button class="btn sm" data-a="x" data-v="mem">Download CSV</button></p><div class="tw"><table><tr><th>Name</th><th>Phone</th><th>Plan</th><th>Expires</th><th>Status</th><th>Actions</th></tr>${L2.map(m=>{const s=st(m);return `<tr><td>${esc(m.name)}</td><td><a href="tel:${esc(m.phone)}">${esc(m.phone)}</a></td><td>${esc(m.plan||"-")}</td><td>${fd(m.end)}</td><td><span class="tag ${s[1]}">${s[0]}</span></td><td><button class="btn sm" data-a="pay" data-v="${m.id}">Record payment</button> <button class="btn sm ghost" data-a="tg" data-v="${m.id}">${m.active?"Set inactive":"Set active"}</button> <button class="btn sm red" data-a="dm" data-v="${m.id}" aria-label="Delete member">✕</button></td></tr>`}).join("")}</table></div>`:`<div class="empty">No members here yet.</div>`)}
+if(tab=="rem")h+=`<p style="color:var(--mut)">Active members whose plan ends within 2 days. WhatsApp opens with the message ready and you press send. Inactive members are never listed.</p>`+(dr.length?`<p><a class="btn" target="_blank" rel="noopener" href="${wl(CFG.phone,omsg())}">Send today's list to my WhatsApp</a></p><div class="tw"><table>${dr.map(m=>{const k=m.id+m.end;return `<tr><td>${esc(m.name)}</td><td>${esc(m.plan)}</td><td>ends ${fd(m.end)}</td><td>${D.rem[k]?'<span class="tag ok">Sent</span>':'<span class="tag warn">Pending</span>'}</td><td><a class="btn sm" target="_blank" rel="noopener" data-rem="${k}" href="${wl(m.phone,cmsg(m))}">Remind client</a> <button class="btn sm ghost" data-a="pay" data-v="${m.id}">Renewed? Record payment</button></td></tr>`}).join("")}</table></div>`:`<div class="empty">No renewals due in the next 2 days.</div>`);
+if(tab=="rev"){const ms=[...Array(6)].map((_,i)=>{const d=new Date();d.setDate(1);d.setMonth(d.getMonth()-i);return iso(d).slice(0,7)}),tot=ms.map(k=>D.pay.filter(p=>p.date.startsWith(k)).reduce((s,p)=>s+p.amt,0)),mx=Math.max(...tot,1);
+h+=`<h3 style="margin-bottom:10px">Monthly collection</h3>`+ms.map((k,i)=>`<div style="display:grid;grid-template-columns:90px 1fr 100px;gap:10px;align-items:center;margin:6px 0"><span>${new Date(k+"-01T00:00:00").toLocaleDateString("en-IN",{month:"short",year:"numeric"})}</span><div class="meter" style="background:var(--line);margin:0"><i style="width:${tot[i]/mx*100}%;background:var(--ink)"></i></div><b>${inr(tot[i])}</b></div>`).join("")+`<h3 style="margin:20px 0 8px">Payment history</h3>`+(D.pay.length?`<p><button class="btn sm" data-a="x" data-v="pay">Download CSV</button></p><div class="tw"><table><tr><th>Date</th><th>Member</th><th>Plan</th><th>Amount</th><th>Mode</th><th></th></tr>${D.pay.slice(0,40).map(p=>`<tr><td>${fd(p.date)}</td><td>${esc(p.name)}</td><td>${esc(p.plan)} · ${p.mo}m</td><td>${inr(p.amt)}</td><td>${p.mode}</td><td><button class="btn sm red" data-a="dp" data-v="${p.id}" aria-label="Delete payment">✕</button></td></tr>`).join("")}</table></div>`:`<div class="empty">Payments you record appear here.</div>`)}
+if(tab=="enq")h+=D.enq.length?`<div class="tw"><table><tr><th>Date</th><th>Name</th><th>Phone</th><th>Interest</th><th>Status</th><th></th></tr>${D.enq.map(e=>`<tr><td>${fd(e.date.slice(0,10))}</td><td>${esc(e.name)}</td><td><a href="tel:${e.phone}">${e.phone}</a></td><td>${esc(e.plan)}</td><td><select data-a="es" data-v="${e.id}">${["New","Called","Joined","Not interested"].map(s=>`<option${s==e.st?" selected":""}>${s}</option>`).join("")}</select></td><td><a class="btn sm" target="_blank" rel="noopener" href="${wl(e.phone,"Hi "+e.name+", this is Claude Fitness. Thanks for your enquiry!")}">WhatsApp</a> <button class="btn sm" data-a="mk" data-v="${e.id}">Make member</button> <button class="btn sm red" data-a="de" data-v="${e.id}" aria-label="Delete">✕</button></td></tr>`).join("")}</table></div>`:`<div class="empty">No enquiries yet. They arrive from the Join form on the website.</div>`;
+if(tab=="set")h+=`<h3>Plan prices (₹ per month)</h3><div class="row2">${D.plans.map((p,i)=>`<div><label>${esc(p.n)}</label><input type="number" data-pi="${i}" value="${p.p}"></div>`).join("")}</div><p><button class="btn" data-a="sp">Save prices</button></p><label for="bt">Notice bar on website (empty to hide)</label><input id="bt" value="${esc(D.banner)}"><p><button class="btn" data-a="sb">Save notice</button></p><h3 style="margin-top:20px">Backup</h3><p style="color:var(--mut)">Data is stored in this browser. Download a backup regularly.</p><p><button class="btn sm" data-a="bk">Download backup</button> <label class="btn sm ghost" style="display:inline-block;margin:0;cursor:pointer">Restore backup<input type="file" id="rf" accept=".json" hidden></label></p>`;
+B.innerHTML=h}
+
+function login(){$("adminBody").innerHTML=`<form id="lf" style="max-width:320px"><label for="pin">Owner PIN</label><input id="pin" type="password" inputmode="numeric" autocomplete="off"><p id="lE" style="color:var(--bad)"></p><button class="btn">Open dashboard</button><p style="color:var(--mut);font-size:13px">Demo PIN: 1234. Change it in the CFG block at the top of the page code.</p></form>`}
+function openAdmin(){$("admin").showModal();authed?adm():login()}
+const B0=$("adminBody");
+B0.onsubmit=e=>{e.preventDefault();const f=e.target.id,T=iso(new Date());
+if(f=="lf"){if($("pin").value===CFG.pin){authed=true;adm();const n=due().length;if(n)toast(n+" renewal reminder"+(n>1?"s":"")+" due. Open the Reminders tab.")}else $("lE").textContent="Wrong PIN.";return}
+if(f=="pf"){const pl=D.plans[+$("pPl").value],mo=+$("pMo").value,amt=+$("pAm").value;let m=payFor=="new"?null:D.members.find(x=>x.id==payFor);
+if(!m){const n=$("pN").value.trim(),p=$("pP").value.replace(/\D/g,"").slice(-10);if(n.length<2||p.length!=10){toast("Enter a name and a 10-digit mobile");return}m={id:Date.now(),name:n,phone:p,joined:T,end:T,active:true};D.members.unshift(m)}
+const b=ld(m.end>T?m.end:T);b.setMonth(b.getMonth()+mo);m.end=iso(b);m.plan=pl.n;m.active=true;
+if(amt>0)D.pay.unshift({id:Date.now()+1,mid:m.id,name:m.name,plan:pl.n,mo,amt,mode:$("pMd").value,date:T});
+payFor=null;pre={};save();adm();toast("Saved. "+m.name+" is active till "+fd(m.end))}};
+B0.onclick=e=>{const r=e.target.closest("[data-rem]");if(r){D.rem[r.dataset.rem]=1;save();setTimeout(adm,400);return}
+const t=e.target.closest("[data-a]");if(!t||t.tagName=="SELECT")return;const a=t.dataset.a,v=t.dataset.v;
+if(a=="tab"){tab=v;payFor=null;q=""}
+else if(a=="out"){authed=false;$("admin").close();return}
+else if(a=="ci"){const s=D.att[ad]=D.att[ad]||[],i=s.indexOf(+v);i<0?s.push(+v):s.splice(i,1);save()}
+else if(a=="new")payFor="new";
+else if(a=="pay"){payFor=+v;tab="mem";q=""}
+else if(a=="cancel"){payFor=null;pre={}}
+else if(a=="tg"){const m=D.members.find(x=>x.id==+v);m.active=!m.active;save();toast(m.name+" set "+(m.active?"active":"inactive"))}
+else if(a=="dm"){if(!confirm("Delete this member and their record?"))return;D.members=D.members.filter(x=>x.id!=+v);save()}
+else if(a=="dp"){if(!confirm("Delete this payment entry?"))return;D.pay=D.pay.filter(x=>x.id!=+v);save()}
+else if(a=="de"){if(!confirm("Delete this enquiry?"))return;D.enq=D.enq.filter(x=>x.id!=+v);save()}
+else if(a=="mk"){const n=D.enq.find(x=>x.id==+v);pre={name:n.name,phone:n.phone};n.st="Joined";save();tab="mem";payFor="new"}
+else if(a=="x")csv(v);
+else if(a=="sp"){B0.querySelectorAll("[data-pi]").forEach(i=>D.plans[+i.dataset.pi].p=Math.max(0,+i.value));save();renderPlans();toast("Prices updated")}
+else if(a=="sb"){D.banner=$("bt").value.trim();save();banner();toast("Notice saved")}
+else if(a=="bk")dl("claude-fitness-backup.json",JSON.stringify(D),"application/json");
+adm()};
+B0.onchange=e=>{const t=e.target;
+if(t.id=="ad"){ad=t.value||iso(new Date());adm()}
+else if(t.dataset.a=="flt"){flt=t.value;adm()}
+else if(t.dataset.a=="es"){D.enq.find(x=>x.id==+t.dataset.v).st=t.value;save()}
+else if(t.id=="pPl"||t.id=="pMo"){$("pAm").value=Math.round(D.plans[+$("pPl").value].p*+$("pMo").value*({1:1,3:.9,6:.9,12:.75}[$("pMo").value]))}
+else if(t.id=="rf"){const f=t.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{D=JSON.parse(r.result);save();location.reload()}catch(x){toast("That file is not a valid backup")}};r.readAsText(f)}};
+B0.oninput=e=>{if(e.target.id=="sq"){q=e.target.value;adm();const s=$("sq");s.focus();s.setSelectionRange(q.length,q.length)}};
+
+function banner(){$("bar").hidden=!D.banner;$("barTxt").textContent=D.banner}
+
+$("menu").onclick=()=>{const o=$("nav").classList.toggle("open");$("menu").setAttribute("aria-expanded",o)};
+$("nav").onclick=e=>{if(e.target.tagName=="A")$("nav").classList.remove("open")};
+$("thm").onclick=()=>{const r=document.documentElement,d=r.dataset.theme?r.dataset.theme=="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.dataset.theme=d?"light":"dark"};
+$("hrs").innerHTML=`Mon–Sat · 5–11 am and 5–10 pm<br>Sunday · closed`;
+$("telL").href="tel:+"+CFG.phone;$("telL").textContent=CFG.display;
+const wa="https://wa.me/"+CFG.phone+"?text="+encodeURIComponent("Hi Claude Fitness, I want to know about membership.");$("waL").href=wa;$("waF").href=wa;
+$("yr").textContent=new Date().getFullYear();
+banner();renderPlans();renderClasses();status();setInterval(status,60000);
+</script>
+</body>
+</html>
